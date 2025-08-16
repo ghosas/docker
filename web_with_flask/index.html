@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Docker Compose Webpage</title>
+</head>
+<body>
+  <h1>Hello from Docker Compose Frontend!</h1>
+  <button onclick="fetchData()">Call Backend</button>
+  <p id="result"></p>
+
+  <script>
+    async function fetchData() {
+      const res = await fetch("/api/hello"); // same origin now
+      const data = await res.json();
+      document.getElementById("result").innerText = data.message;
+    }
+  </script>
+</body>
+</html>
