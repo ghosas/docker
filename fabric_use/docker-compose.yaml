@@ -1,0 +1,7 @@
+services:
+  fabric_cli:
+    image: fabric_cli:1.0   # matches the name you used in docker build -t fabric_cli
+    container_name: fabric_cli
+    volumes:
+      - ${HOME}/.config/fabric:/root/.config/fabric
+
